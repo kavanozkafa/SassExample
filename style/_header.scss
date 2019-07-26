@@ -1,0 +1,22 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+header {
+  @include flexCenter(column);
+  background: rgb(24, 168, 216);
+  height: 100vh;
+  color: $textColor;
+  button {
+    //nested structure . this mean  > header button {}
+    background-color: $primaryBtn;
+    &:hover {
+      // with & sign we can add hover,after kinda things.
+      background: red;
+    }
+  }
+}

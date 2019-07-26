@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./header"; // sass ile css dosyalarını parçalara ayırabiliriz.
+
+.contact {
+  @include flexCenter(row);
+}
+
+.info {
+  //inheritence
+  @extend header;
+  background: maroon;
+
+  //math operations.
+  width: 100% - 20%;
+}
